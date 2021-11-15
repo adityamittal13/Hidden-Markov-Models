@@ -5,7 +5,7 @@ def viterbi_algorithm(observations, states, start_p, trans_p, emit_p, table):
     for st in states:
         V[0][st] = {"prob": start_p[st] * emit_p[st][observations[0]], "prev": None}
    
-    for t in range(1, len(observations)):
+    for t in range(1, len(observations)): 
         V.append({})
         for st in states:
             # Initialize - multiply by calculated probabilities of the last step and the transition probability for first state
